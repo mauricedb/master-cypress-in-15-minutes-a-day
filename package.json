@@ -1,0 +1,27 @@
+{
+  "name": "master-cypress-in-15-minutes-a-day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauricedb/master-cypress-in-15-minutes-a-day.git"
+  },
+  "keywords": [
+    "cypress",
+    "demo"
+  ],
+  "author": "Maurice de Beijer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauricedb/master-cypress-in-15-minutes-a-day/issues"
+  },
+  "homepage": "https://github.com/mauricedb/master-cypress-in-15-minutes-a-day#readme",
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}
