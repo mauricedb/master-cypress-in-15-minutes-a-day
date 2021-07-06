@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 context('Block Buster Film Reviews', () => {
   it('Has the correct title - Home Page', () => {
     cy.visit('https://block-buster-film-reviews.azureedge.net')

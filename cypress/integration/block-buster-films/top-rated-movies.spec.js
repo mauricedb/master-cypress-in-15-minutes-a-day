@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 // top-rated-movies.spec.js created with Cypress
 //
 // Start writing your Cypress tests below!
