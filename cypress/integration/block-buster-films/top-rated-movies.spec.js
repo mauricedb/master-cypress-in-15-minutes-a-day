@@ -8,15 +8,15 @@
 // https://on.cypress.io/writing-first-test
 
 context('Top rated movies', () => {
-  it('Has 24 movies per page', () => {
+  beforeEach(() => {
     cy.visit('https://block-buster-film-reviews.azureedge.net/top-rated-movies')
+  })
 
+  it('Has 24 movies per page', () => {
     cy.get('.movie-item-style-1').should('have.length', 24)
   })
 
   it('Has the correct title', () => {
-    cy.visit('https://block-buster-film-reviews.azureedge.net/top-rated-movies')
-
     cy.title().should('equal', 'Top rated movies')
     cy.get('h1')
       .should('be.visible')
@@ -24,8 +24,6 @@ context('Top rated movies', () => {
   })
 
   it('The movie should be Dilwale Dulhania Le Jayenge', () => {
-    cy.visit('https://block-buster-film-reviews.azureedge.net/top-rated-movies')
-
     cy.get('#movie-19404 > .mv-item-infor > h6 > a')
       .should('have.text', 'Dilwale Dulhania Le Jayenge')
   })
