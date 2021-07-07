@@ -9,7 +9,7 @@
 
 context('Top rated movies', () => {
   beforeEach(() => {
-    cy.visit('https://block-buster-film-reviews.azureedge.net/top-rated-movies')
+    cy.visit('/top-rated-movies')
   })
 
   it('Has 24 movies per page', () => {

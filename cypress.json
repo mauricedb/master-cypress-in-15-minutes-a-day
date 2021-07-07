@@ -1,1 +1,10 @@
-{}
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://block-buster-film-reviews.azureedge.net",
+  "defaultCommandTimeout": 10000,
+  "ignoreTestFiles": [
+    "**/1-getting-started/*", 
+    "**/2-advanced-examples/*"
+  ]
+
+}

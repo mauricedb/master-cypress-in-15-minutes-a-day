@@ -2,7 +2,7 @@
 
 context('Block Buster Film Reviews', () => {
   beforeEach(() => {
-    cy.visit('https://block-buster-film-reviews.azureedge.net')
+    cy.visit('/')
   })
 
   it('Has the correct title - Home Page', () => {
