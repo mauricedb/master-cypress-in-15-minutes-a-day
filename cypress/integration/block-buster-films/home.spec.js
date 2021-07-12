@@ -34,6 +34,22 @@ context('Block Buster Film Reviews', () => {
       cy.get('.menu-left a:visible').eq(1).should('have.text', 'Popular movies')
       cy.get('.menu-left a:visible').eq(-1).should('have.text', 'Celebrities')
     })
+
+    it('Can navigate to Top rated movies', () => {
+      cy.contains('top rated movies', { matchCase: false }).click()
+      cy.title().should('equal', 'Top rated movies')
+    })
+
+    it('Can navigate to Popular movies', () => {
+      cy.contains(/^popular movies$/i).click()
+      cy.title().should('equal', 'Popular movies')
+    })
+
+    it('Can navigate to Celebrities', () => {
+      cy.get('.menu-left').contains('Celebrities').click()
+      cy.title().should('equal', 'Celebrities')
+    })
+
   })
 
   context.skip('Anti-patterns', () => {
