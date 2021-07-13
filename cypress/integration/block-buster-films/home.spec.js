@@ -11,8 +11,13 @@ context('Block Buster Film Reviews', () => {
   })
 
   context('The left navigation menu', () => {
+    beforeEach(()=> {
+      cy.get('.menu-left a:visible').as('nav-links')
+    })
+
     it('The first navigation link points to Top rated movies', () => {
       cy.get('.menu-left a:visible').first().should('have.text', 'Top rated movies')
+      cy.get('@nav-links').first().should('have.text', 'Top rated movies')
     })
 
     it('The last  navigation link points to Celebrities', () => {
@@ -30,9 +35,9 @@ context('Block Buster Film Reviews', () => {
     })
 
     it('The navigation links have the correct text', () => {
-      cy.get('.menu-left a:visible').eq(0).should('have.text', 'Top rated movies')
-      cy.get('.menu-left a:visible').eq(1).should('have.text', 'Popular movies')
-      cy.get('.menu-left a:visible').eq(-1).should('have.text', 'Celebrities')
+      cy.get('@nav-links').eq(0).should('have.text', 'Top rated movies')
+      cy.get('@nav-links').eq(1).should('have.text', 'Popular movies')
+      cy.get('@nav-links').eq(-1).should('have.text', 'Celebrities')
     })
 
     it('Can navigate to Top rated movies', () => {
