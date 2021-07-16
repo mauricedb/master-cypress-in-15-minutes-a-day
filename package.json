@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/mauricedb/master-cypress-in-15-minutes-a-day#readme",
   "devDependencies": {
-    "cypress": "^7.6.0"
+    "cypress": "^7.7.0"
   }
 }
