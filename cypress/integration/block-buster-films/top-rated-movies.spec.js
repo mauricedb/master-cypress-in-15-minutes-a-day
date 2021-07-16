@@ -27,4 +27,8 @@ context('Top rated movies', () => {
     cy.get('#movie-19404 > .mv-item-infor > h6 > a')
       .should('have.text', 'Dilwale Dulhania Le Jayenge')
   })
+
+  it('Open Pulp Fiction', () => {
+    cy.get('#movie-680 .hvr-inner > a').click('bottomRight')
+  })
 })
